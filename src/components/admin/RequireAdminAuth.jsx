@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { checkAdminAuth } from '../../utils/checkAdminAuth';
+import { Loader } from 'lucide-react';
 
 export default function RequireAdminAuth({ children }) {
   const navigate = useNavigate();
@@ -17,7 +18,11 @@ export default function RequireAdminAuth({ children }) {
     })();
   }, []);
 
-  if (checking) return <p>Checking admin session...</p>;
+  if (checking) return (
+    <div className={`w-full h-dvh max-h-dvh flex items-center justify-center`}>
+        <Loader className={`size-[150px] text-green-900 animate-spin`}/>
+    </div>
+  );
 
   return children;
 }
