@@ -1,4 +1,5 @@
 import { Menu } from 'lucide-react'
+import { NavLink } from 'react-router-dom';
 import fmcLogo from "../../assets/images/fmc-logo.png";
 
 export default function TopNavigation({ toggleSidebar }) {
@@ -14,7 +15,7 @@ export default function TopNavigation({ toggleSidebar }) {
 
       {/* Logo and title */}
       <div className="flex items-center space-x-3">
-        <img src={fmcLogo} alt="FMC Logo" className="w-10 h-10 object-cover" />
+        <NavLink to={"/"} className="w-10 h-10"><img src={fmcLogo} alt="FMC Logo" className="w-full h-full object-cover" /></NavLink>
         <div className="text-left leading-tight">
           <h1 className="text-sm font-semibold">FMC Keffi</h1>
           <p className="text-xs text-gray-500">AI Health Care Consultation System</p>
