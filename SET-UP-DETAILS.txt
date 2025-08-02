@@ -1,0 +1,17 @@
+SET UP DETAILS
+
+TO SETUP THE FRONTEND
+    Run "npm install"
+    Run "npm run dev"
+
+TO SETUP THE BACKEND
+    Run composer install in the /backend folder.
+    In vite.config.js change proxy.target ro point to your backend url and then start your backend server
+
+TO SETUP THE DATABASE
+    In /backend/db import the db.sql file to php my admin
+    also setup you .env file by renaming .env.example to .env and filling up the variables
+
+ALL LOGINS
+    ADMIN
+    admin@fmckeffi.com || admin2025
